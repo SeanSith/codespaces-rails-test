@@ -22,6 +22,7 @@ services:
       - "database:/var/lib/mysql"
       - ".:/docker-entrypoint-initdb.d"
     environment:
+      MYSQL_DATABASE: codespaces_rails_test_development
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
       MYSQL_ROOT_HOST: '%'
     ports:
